@@ -1,0 +1,993 @@
+/***** Custom Properties******/
+:root {
+  --first-color: #ffe54f;
+  --first-alpha-color: rgba(255, 229, 79, 0.75);
+  --second-color: #00335a;
+  --second-alpha-color: rgba(0, 106, 170, 0.75);
+  --white-color: #fff;
+  --gray-light-color: #f3f3f3;
+  --gray-color: #ccc;
+  --gray-dark-color: #666;
+  --black-color: #000;
+  --link-color: #509ee3;
+  --title-color: #333;
+  --text-color: #222;
+  --red: #bd0707;
+  --green: #71b100;
+  --white-alpha-color: rgba(255, 255, 255, 0.5);
+  --black-alpha-color: rgba(0, 0, 0, 0.5);
+  --font: "Krub", sans-serif;
+  --max-width: 120rem;
+}
+
+/***** Espacio de Reseteo *****/
+/*** Codigo para el box model***/
+html {
+  box-sizing: border-box;
+  font-family: var(--font);
+  font-size: 15px;
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  overflow-x: hidden; /*Oculta el scroll cuando se desvorda un contenido */
+  color: var(--text-color);
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/***Configuramos los titulos ***/
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2.8rem;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+/**** Componentes ****/
+/*** Boton color azul ***/
+.btn-azul-block {
+  background-color: var(--second-color);
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--white-color);
+  padding: 1rem 3rem;
+  text-align: center;
+  margin-top: 2rem;
+  display: block;
+  border: none;
+}
+/*** Boton color azul hover ***/
+.btn-azul-block:hover {
+  background-color: var(--second-alpha-color);
+}
+
+/* diseño del boton del formulario, esta parte viene adaptada del boton-azul que ya estaba creado*/
+.boton-login {
+  background-color: var(--first-color);
+  color: var(--black-color);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  border: none;
+  width: 80%;
+}
+/*** Boton login hover***/
+.boton-login:hover {
+  cursor: pointer;
+  color: var(--white-color);
+}
+/*** Boton login a la izquierda ***/
+.boton-login-rigth {
+  text-align: right;
+  margin: 1rem;
+}
+
+/**** Boton amarillo ***/
+.boton-amarillo {
+  background-color: var(--first-color);
+  color: var(--white-color);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  text-align: center;
+  margin-top: 2rem;
+  display: inline-block;
+  border: none;
+  width: 80%;
+  pointer-events: auto;
+}
+
+/** fin de modificaciones*/
+
+@media (min-width: 768px) {
+  .boton-amarillo {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .boton-amarillo {
+    width: 30%;
+  }
+}
+
+/*** Boton amarillo hover***/
+.boton-amarillo:hover {
+  cursor: pointer;
+  background-color: var(--first-alpha-color);
+}
+/*** Boton amarillo a la izquierda ***/
+.boton-amarillo-rigth {
+  text-align: right;
+}
+
+.boton-amarillo-center {
+  text-align: center;
+}
+
+.boton-azul {
+  background-color: var(--second-color);
+  color: var(--white-color);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  text-align: center;
+  margin: 2rem;
+  display: inline-block;
+  border: none;
+  width: 50%;
+}
+/*** Boton azul hover***/
+.boton-azul:hover {
+  cursor: pointer;
+  background-color: var(--second-alpha-color);
+  color: var(--title-color);
+}
+/*** Boton azul a la izquierda ***/
+.boton-azul-rigth {
+  text-align: right;
+}
+@media (min-width: 1024px) {
+  .boton-azul {
+    width: 40%;
+  }
+}
+
+/*** estilos de boton ****/
+.boton {
+  background-color: var(--first-alpha-color);
+  color: var(--white-color);
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  width: auto;
+  border: none;
+}
+/*** estilos de boton hover****/
+.boton:hover {
+  background-color: var(--first-color);
+  color: var(--black-color);
+}
+.boton-rojo-block {
+  background-color: var(--red);
+  color: var(--white-color);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  text-align: center;
+  margin: 2rem;
+  display: block;
+  border: none;
+  width: 90%;
+}
+
+.boton-verde-block {
+  background-color: var(--green);
+  color: var(--white-color);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  text-align: center;
+  margin: 2rem;
+  display: block;
+  border: none;
+  width: 90%;
+}
+
+.boton-verde-block:hover,
+.boton-rojo-block:hover {
+  color: var(--black-color);
+}
+
+/*** estilo de sombra ***/
+.sombra {
+  box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.44);
+  background-color: var(--blanco);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 1rem;
+}
+
+/***** Ventana Modal ***/
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black-alpha-color);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 1s;
+}
+
+.modal-contenido {
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.modal-close svg {
+  width: 3rem;
+  height: 3rem;
+  fill: var(--first-color);
+}
+
+.modal#contacto:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/***** Utilidades ******/
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--max-width);
+}
+
+.none {
+  display: none;
+  pointer-events: none;
+  overflow: hidden;
+  height: 0;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.display-none {
+  display: none;
+}
+
+.main {
+  height: 100%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+/* css para ocultar tanto los lebal y los input  Inicio del las ids luis A  */
+#RFCvent {
+  display: none;
+}
+#celvent {
+  display: none;
+}
+#direccionvent {
+  display: none;
+}
+#RFClabel {
+  display: none;
+}
+#celebal {
+  display: none;
+}
+#direccionlebal {
+  display: none;
+}
+/* css para ocultar los label y los input inicio de las ids Luis A */
+
+/*** Estilos de la pagina ****/
+
+
+/* forma de contactar  luis armando*/
+.formulario .forma-contacto {
+  max-width: 35rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/** aqui usamos estilos css para los inputs que son de tipo radio***/
+.formulario input[type="radio"] {
+  margin: 0;
+  width: auto;
+}
+
+
+
+
+/**** header *****/
+header {
+  background-image: url(../img/header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 80vh;
+}
+
+.head {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--white-color);
+}
+
+.head-title {
+  width: auto;
+  margin: 0 auto;
+  font-size: 2.5vh;
+}
+
+.head-title span {
+  color: var(--first-color);
+}
+
+.head-text {
+  font-size: 3vh;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/**** header desktop ****/
+@media (min-width: 1024px) {
+  .head-title,
+  .head-text {
+    text-align: center;
+    font-size: 5vh;
+  }
+}
+
+/*** Barra Menu ****/
+.menu {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  padding: 1rem;
+  width: 100%;
+  height: 4rem;
+  background-color: var(--second-color);
+}
+
+/*** Media para hacer cambio a desktop ***/
+@media (min-width: 1024px) {
+  .menu {
+    position: static;
+    top: 10rem;
+    padding: 0 0.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.container-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  color: var(--first-color);
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+/**** div de los botones***/
+.botones {
+  background-color: var(--second-color);
+  cursor: pointer;
+  margin: 0;
+}
+
+.botones svg {
+  fill: var(--first-color);
+  pad: 1rem;
+}
+
+/**** menu de contenido ****/
+.bar-nav {
+  position: fixed;
+  left: 0;
+  bottom: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--first-color);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.bar-menu,
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bar-menu {
+  width: 100%;
+}
+
+.menu--link {
+  display: block;
+  padding: 0.65rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.menu--link:hover {
+  background-color: var(--second-color);
+  color: var(--white-color);
+  width: 100%;
+}
+.menu--link:hover > svg {
+  fill: var(--white-color);
+}
+
+.bar-nav.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.submenu {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.submenu .menu--link {
+  background-color: var(--second-alpha-color);
+  padding-left: 4rem;
+}
+
+/**** Media para el menu de contenido ****/
+@media (min-width: 1024px) {
+  .none {
+    display: inline;
+  }
+  .ocultar {
+    display: none;
+  }
+  .none {
+    display: inline-block;
+    pointer-events: auto;
+    overflow: visible;
+    height: auto;
+  }
+  .favorito {
+    cursor: pointer;
+    margin: 0;
+    fill: var(--first-color);
+    pad: 1rem;
+  }
+
+  .menu--link:hover > .favorito {
+    fill: var(--black-color);
+  }
+
+  .bar-nav {
+    position: static;
+    background-color: var(--secundario);
+    opacity: 1;
+    pointer-events: auto;
+    width: auto;
+  }
+
+  .bar-menu {
+    display: flex;
+  }
+
+  .contenedor-menu {
+    position: relative;
+  }
+
+  .submenu {
+    position: absolute;
+    top: 4rem;
+    width: 15rem;
+    overflow: visible;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .submenu .menu--link {
+    padding: 0;
+  }
+
+  .contenedor-menu:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+  }
+  .menu--link {
+    color: var(--first-color);
+  }
+
+  .bar-menu .menu--item .menu--link:hover {
+    background-color: var(--first-color);
+    color: var(--black-color);
+  }
+
+  .submenu .menu--item {
+    padding: 0;
+  }
+
+  .menu--item:hover .menu--link {
+    color: var(--black-color);
+  }
+}
+
+/**** sobre-nosotros ****/
+
+.nosotros-title {
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 1.5rem;
+  padding: 0;
+}
+
+.valores {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.valores h3 {
+  font-weight: normal;
+  margin: 0.5rem;
+}
+
+.valores p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.valores .icono-valores {
+  width: 9rem;
+  height: 9rem;
+}
+
+/*** media para desktop de nosotros*****/
+@media (min-width: 768px) {
+  .nosotros-mis-vis {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*** media para desktop de nosotros*****/
+@media (min-width: 1024px) {
+  .nosotros-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*** Dudas ***/
+@media (min-width: 768px) {
+  .dudas-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .dudas-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.dudas-title {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 1.5rem;
+  padding: 0;
+}
+
+/****Catalago****/
+.catalago-home h2 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+.catalago-container {
+  margin-bottom: 1rem;
+}
+
+.contenedor-anuncio {
+  text-align: center;
+}
+
+.titulo-anuncio {
+  font-size: 3rem;
+}
+
+.contenedor-anuncio .img-anuncio {
+  width: 80%;
+  height: 70%;
+}
+
+.contenedor-anuncio .info-anuncio h3 {
+  font-size: 2rem;
+  margin: 1.5rem;
+}
+
+.contenedor-anuncio .info-anuncio .precio-anuncio {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.contenedor-anuncio .info-anuncio .iconos-caracteristicas {
+  margin: 0 auto;
+}
+
+.anuncio {
+  width: 100%;
+  border: solid thin var(--black-color);
+  padding: 1rem 1.5rem;
+  margin: 1rem auto;
+}
+
+.anuncio-page {
+  width: 80%;
+  padding: 1rem 1.5rem;
+  margin: 0 auto 3rem auto;
+  background-color: var(--gray-color);
+}
+
+.img-anuncio {
+  width: 100%;
+  height: auto;
+  min-height: 15rem;
+  max-height: 20rem;
+  margin: 0;
+}
+
+.info-anuncio {
+  padding: 1.5rem;
+}
+
+.info-anuncio h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.info-anuncio .descripcion {
+  width: auto;
+  height: auto;
+  word-wrap: break-word;
+}
+
+.info-anuncio p {
+  text-align: justify;
+  font-weight: bold;
+}
+.info-anuncio .title span {
+  font-weight: bold;
+}
+
+.info-anuncio .precio-anuncio {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--second-alpha-color);
+}
+
+.iconos-caracteristicas {
+  list-style: none;
+  padding: 0;
+  max-width: 40rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.iconos-caracteristicas li {
+  display: flex;
+  margin: 0.5rem;
+}
+
+.iconos-caracteristicas li img {
+  height: 3rem;
+  margin-right: 0.3rem;
+}
+/**** media para tablet de catalago ****/
+@media (min-width: 768px) {
+  .catalago-home-container,
+  .catalago-container {
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    gap: 1rem;
+  }
+}
+
+/**** media para desktop de catalago ****/
+@media (min-width: 1024px) {
+  .catalago-container {
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    gap: 2rem;
+  }
+}
+
+/*** Contactanos ****/
+.contacto h1 {
+  width: 100%;
+  font-size: 3.8rem;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.contacto h2 {
+  font-size: 2.8rem;
+  font-weight: normal;
+  margin: 0;
+  text-align: center;
+  color: var(--title-color);
+}
+
+/**** Formulario ****/
+.formulario {
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+.formulario legend {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.formulario label {
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+}
+/**** aqui usamos estilos css para los inputs que no sean de tipo submit***/
+.formulario input:not([type="submit"]),
+.formulario select,
+.formulario textarea {
+  padding: 1rem;
+  display: block;
+  width: 100%;
+  background-color: var(--gray-light-color);
+  border: 1px solid var(--gray-dark-color);
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.formulario textarea {
+  height: 20rem;
+}
+
+.formulario p {
+  font-size: 1.2rem;
+  margin: 1rem;
+}
+
+/*** forma de contactar ***/
+.formulario .forma-contacto {
+  max-width: 35rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/**** aqui usamos estilos css para los inputs que son de tipo radio***/
+.formulario input[type="radio"] {
+  margin: 0;
+  width: auto;
+}
+
+/*** alertas ***/
+.alerta {
+  padding: 0.5rem;
+  text-align: center;
+  color: var(--white-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+.error {
+  background-color: var(--red);
+}
+.exito {
+  background-color: var(--green);
+}
+
+/***** Tabla Propiedades *****/
+table.propiedades {
+  margin: 0 auto;
+  width: 90%;
+  border-spacing: 0;
+}
+
+table.propiedades thead {
+  background-color: var(--first-alpha-color);
+}
+
+table.propiedades thead th {
+  color: var(--white-color);
+  padding: 1rem;
+}
+
+table.propiedades .imagen-tabla {
+  width: 10rem;
+}
+
+.imagen {
+  width: 15rem;
+}
+
+/*** footer ****/
+footer {
+  background-color: var(--second-alpha-color);
+  width: 100%;
+  height: 10rem;
+  display: flex;
+}
+
+footer p {
+  width: 80%;
+  margin: 1rem auto;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+footer span {
+  color: var(--first-color);
+}
+
+@media (min-width: 1024px) {
+  footer {
+    height: 5rem;
+    margin: auto;
+  }
+}
+
+.contenedor-password {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icono-password {
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+
+/**** login Cesar paolo galicia morales ****/
+
+/*diseño de la estrcutura del formulario tanto dimenciones como color*/
+.form {
+  background: var(--gray-light-color);
+  text-align: center;
+  padding: 0.5rem;
+  margin: 2rem auto;
+  box-shadow: 0 0 6px 0 var(--text-color);
+  border-radius: 10px;
+  width: 80%;
+}
+
+.form .grupo {
+  position: relative;
+  margin: 30px;
+}
+/** diseño de los input's y animaciones*/
+.form .grupo input {
+  background: none;
+  color: #ccc;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--black-alpha-color);
+}
+
+.form .grupo textarea {
+  background: none;
+  color: var(--gray-dark-color);
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--black-alpha-color);
+}
+
+.form .grupo input:focus {
+  outline: none;
+  color: var(--gray-dark-color);
+}
+/* animacion de los input's movimiento del texto*/
+.form .grupo label {
+  color: var(--black-alpha-color);
+  font-size: 16px;
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  transition: 0.5s ease-in-out all;
+  pointer-events: none;
+}
+/* diseño de las animaciones y instrucccion para que se mantenga cuando se cumplen las especificaciones del input y color negro que indica seleccionado o lleno*/
+.form .grupo input:focus ~ label,
+.form .grupo input:valid ~ label {
+  top: -14px;
+  color: var(--black-alpha-color);
+}
+
+/*media queries correspondientes al login tomando de referencia el diseño de desktop y adaptado a moviles*/
+@media (min-width: 1024px) {
+  .form {
+    width: 40%;
+    align-content: center;
+    margin: 2rem auto;
+  }
+
+  .formulario-modal .form {
+    width: 100%;
+    align-content: center;
+    margin: 2rem auto;
+  }
+}
